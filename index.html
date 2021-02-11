@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caitlin Klotz - Project 1</title>
+    <!-- Link to Google Font Raleway in weights 500 and 700. Google fonts sheet gets linked before .css stylesheet. -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Header has an h1 element, an unordered list navbar, and the travel logo -->
+        <!-- The unordered list and the logo are sitting on the same line. -->
+        <div class="wrapper">
+            <div class="flexBanner">
+                <p class="logo">travel</p>
+                <nav>
+                    <ul class="horizontalNavBar">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">Our Mission</a>
+                                </li>
+                                <li>
+                                    <a href="#">Locations</a>
+                                </li>
+                                <li>
+                                    <a href="#">Packages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">Destinations</a>
+                                </li>
+                                <li>
+                                    <a href="#">What to Pack</a>
+                                </li>
+                                <li>
+                                    <a href="#">Planes, Trains, and Automobiles</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="contact">
+                            <a href="#"><span class="contactButton">Contact</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flexHeader">
+                <h1>travel outdoor ipsum dolor sit.</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <section class="feature1">
+                <!-- .feature1 has two images, one on the left (approx. 1/3 container width; image-1.jpeg), and one one the right (approx. 2/3 container width and 1/2 container height; image-2.jpeg) -->
+                <div class="verticalImage">
+                    <img src="./assets/image-1.jpeg" alt="Blue car driving away on road">
+                </div>
+    
+                <div class="verticalFlexContainer">
+                    <img src="./assets/image-2.jpeg" alt="Very small boat on ocean">
+        
+                    <!-- .feature1 also has an h2 heading, a p element, and an anchor tag-->
+                    <div class="featureText">
+                        <h2>Feature</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer</p>
+                        <a href="https://www.gohawaii.com/"><span class="readMore">Read More</span></a>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="feature2">
+                <!-- .feature2 has the opposite layout of .feature1 -->
+                <div class="verticalFlexContainer">
+                    <img src="./assets/image-3.jpeg" alt="Person meditating on the edge of a dock overlooking the water with mountains in the distance">
+                    <div class="featureText">
+                        <h2>Feature</h2>
+                        <p>Exerci tation ullamcorper suscipit</p>
+                        <a href="https://www.alaskatravel.com/"><span class="readMore">Read More</span></a>
+                    </div>
+                </div>
+    
+                <div class="verticalImage">
+                    <img src="./assets/image-4.jpeg" alt="Man standing at cliff's edge looking at rock formations in the water">
+                </div>
+            </section>
+    
+            <section class="travelImages">
+                <!-- .travelImages has two images in the container at the same width and height, with a margin in the centre. -->
+                <img src="./assets/image-5.jpeg" alt="City in the Mediterranean">
+                <img src="./assets/image-6.jpeg" alt="Bird's eye view of an open suitcase being packed">
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <!-- The footer has four sections: the logo (listed as a p element in the .pdf), a navbar, a paragraph, and the copyright at the bottom (also a p element). -->
+        <div class="wrapper">
+            <div class="footerFlexContainer">
+                <p class="logo">travel</p>
+                <div>
+                    <nav>
+                        <ul class="navFlexContainer">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="https://twitter.com">Twitter</a></li>
+                            <li><a href="https://www.facebook.com">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+            </div>
+    
+            <p class="copyright">Travel Agency</p>
+        </div>
+    </footer>
+</body>
+</html>

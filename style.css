@@ -1,0 +1,415 @@
+html{
+    line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none
+}
+        
+.clearfix:after {
+    visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; 
+}
+        
+html { 
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+        
+*, *:before, *:after {
+    box-sizing: inherit
+}
+        
+.srOnly { 
+    position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.wrapper {
+    max-width: 1140px;
+    width: 90%;
+    margin: 0 auto;
+}
+/* End of snippet */
+
+/* NOTE Organizing: more general rules first; in order of how they appear on your page; some people go by sections */
+/* NOTE When everything is in the right place, make sure to make code DRY. */
+
+/* SECTION Typographical elements */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo,
+h1,
+a,
+.featureText p {
+    font-weight: 700;
+}
+
+h1,
+a,
+.featureText p {
+    color: #333333;
+}
+
+h2,
+footer p {
+    color: #777777;
+}
+
+/* NOTE Below are the typographical features of the header elements: .logo, h1, a tags, .contact, and .readMore (same stylings as .contact) */
+/* NOTE Also styles the instance of .logo in the footer */
+.logo {
+    font-size: 3.8rem; /* 3.8rem * 10px = 38 px */
+    color: #005769;
+}
+
+h1 {
+    font-size: 6.8rem;
+    /* Change the WIDTH PERCENTAGE in order to get the words to appear in half of the header block! */
+    width: 50%;
+}
+
+
+/* NOTE Also styles the a tags in the navbar in the footer, and .readMore */
+a {
+    font-size: 1.9rem;
+
+    /* Remove underline. */
+    text-decoration: none;
+
+    /* Text is in all caps. */
+    text-transform: uppercase;
+}
+
+/* NOTE Below are the typographical features of the section elements: .feature1 p, .feature2 p, h2 */
+.featureText p {
+    font-size: 3.9rem;
+    margin: 0;
+    padding: 0 75px 10px;
+}
+
+.featureText a {
+    margin: 10px;
+    padding: 15px 0;
+}
+
+h2 {
+    margin-top: calc(20px + 1vh);
+    font-size: 2.2rem;
+    /* There is no number with this element */
+
+    /* Text is in all caps. */
+    text-transform: uppercase;
+}
+
+/* NOTE Below are the typographical features of the footer elements: footer p */
+/* NOTE The typographical elements for .logo and a exist in the header */
+footer p {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+
+/* !SECTION */
+
+/* SECTION header */
+header {
+    background-image: url(./assets/image-main.jpeg);
+    background-size: cover;
+    height: 100vh;
+} 
+
+/* NOTE this flexbox container is for the div element with the child: h1 */
+.flexHeader {
+    display: flex;
+    align-items: center;
+    /* Define height of the flexbox by subtracting the height of .flexContainer from the height of the header (100vh). */
+    height: calc(100vh - 125px);
+}
+
+/* NOTE this flexbox container is for the div element with the children: .logo and nav */
+.flexBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NOTE this flexbox container is for the ul element with the children: li*4 */
+.horizontalNavBar {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.horizontalNavBar li {
+    width: 150px;
+}
+
+header li a {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.contact {
+    box-sizing: content-box;
+}
+
+.readMore,
+.contactButton {
+    background-color: #16d6d1;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+/* Create a hover state for .readMore and .Contact */
+.readMore:hover,
+.contactButton:hover {
+    background: lightcoral;
+    color: #f6f8fa;
+}
+
+/* Create a dropdown menu for the top navbar */
+.horizontalNavBar li:not(.contact) a:hover,
+.horizontalNavBar li:not(.contact) a:focus,
+.navFlexContainer a:hover,
+.navFlexContainer a:focus {
+    background: #005769;
+    color: white;
+    border-radius: 5px;
+}
+
+.horizontalNavBar li:hover > .dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.horizontalNavBar li > .dropdown {
+    position: absolute;
+}
+
+.dropdown {
+    list-style: none;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+}
+/* !SECTION */
+
+/* SECTION main */
+main {
+    margin-top: 100px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* NOTE this flexbox container is for the .feature1 and .feature2 elements with the children: .verticalImage, .verticalFlexContainer; and the .travelImages element with the children: img*2 */
+section {
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 0;
+}
+
+.verticalImage {
+    width: calc(33% - 13px);
+}
+
+/* NOTE this flexbox container is for the div element with the children: img, .featureText */
+/* NOTE this flexbox can inherit properties from its parent */
+.verticalFlexContainer {
+    background: #f6f8fa;
+    align-self: stretch;
+    width: calc(67% - 13px);
+} 
+
+/* NOTE this flexbox container is for the div element with the children: h2, p, a */
+.featureText {
+    text-align: center;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.travelImages img {
+    width: calc(50% - 13px);
+}
+/* !SECTION */
+
+/* SECTION footer */
+footer {
+    margin-top: 100px;
+    background-color: #f6f8fa;
+}
+
+/* NOTE this flexbox container is for the div element with the children: .logo, div, p */
+.footerFlexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #777777;
+}
+
+.footerFlexContainer p {
+    flex-basis: 300px;
+    line-height: calc(2rem + 10px);
+} 
+
+/* NOTE this flexbox container is for the ul element with the children: li*7 */
+.navFlexContainer {
+    display: flex;
+    list-style: none;
+    width: 300px;
+    height: 250px;
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.navFlexContainer li {
+    flex-basis: 50px;
+    margin: 5px;
+}
+
+.navFlexContainer a {
+    padding: 10px 20px;
+}
+/* !SECTION */
+
+/* SECTION media queries */
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 6rem;
+    }
+    
+    .horizontalNavBar li {
+        width: 125px;
+    }
+
+    .verticalImage {
+        width: calc(40% - 13px);
+    }
+
+    .verticalFlexContainer {
+        width: calc(60% - 13px);
+    } 
+}
+
+@media (max-width: 800px) {
+    h1 {
+        width: 75%;
+    }
+    
+    .featureText p {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 680px) {
+    /* header */
+    h2 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .contact a {
+        padding: 10px 0;
+    }
+
+    .flexBanner {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .horizontalNavBar {
+        flex-direction: column;
+    }
+
+    .horizontalNavBar li {
+        text-align: center;
+        position: relative;
+    }
+
+    .dropdown {
+        right: 125px;
+        top: 0;
+        width: auto;
+    }
+
+    .dropdown li {
+        width: 155px;
+    }
+
+    .flexHeader {
+        height: calc(100vh - 226px);
+    }
+    
+    /* body */
+    .featureText p, a {
+        font-size: 1.6rem;
+    }
+
+    .featureText p {
+        padding: 0;
+    }
+
+    /* footer */
+    .footerFlexContainer {
+        flex-wrap: wrap;
+    }
+
+    .footerFlexContainer p {
+        flex-basis: initial;
+    }
+
+    .footerFlexContainer .logo {
+        margin-top: 38px;
+    }
+}
+
+@media (max-width: 450px) {
+    /* header */
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    /* body */
+    .verticalImage {
+        width: calc(40% - 5px);
+    }
+
+    .verticalFlexContainer {
+        width: calc(60% - 5px);
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .featureText p, a {
+        font-size: 1.4rem;
+    }
+
+    .featureText a {
+        margin: 0;
+    }
+
+    .readMore {
+        padding: 10px;
+    }
+
+    /* footer */
+    .navFlexContainer {
+        width: 240px;
+    }
+}
